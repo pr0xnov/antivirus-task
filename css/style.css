@@ -233,7 +233,7 @@ main {
     height: 160px;
   }
 }
-@-moz-document url-prefix() {
+@supports (-moz-appearance: none) {
   .blink {
     position: absolute;
     top: 45px;
