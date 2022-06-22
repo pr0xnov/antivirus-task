@@ -12,7 +12,7 @@ fetch("../api/api.json")
   });
 
 function appendData(data) {
-  let mainItems = document.querySelector(".main__items");
+  const mainItems = document.querySelector(".main__items");
   for (let i = 0; i < data.length; i++) {
     let list = document.createElement("ul");
     list.classList.add("items__list");
@@ -70,7 +70,7 @@ function appendData(data) {
 
     let btn = document.createElement("a");
     btn.addEventListener("click", () => {
-      let mainContent = document.querySelector("body");
+      const mainContent = document.querySelector("body");
       let loadFile = document.createElement("div");
       loadFile.classList.add("blink");
       mainContent.appendChild(loadFile);
@@ -79,8 +79,8 @@ function appendData(data) {
       }, 5000);
     });
 
-    // btn.setAttribute("href", data[i].link);
-    btn.setAttribute("rel", "noopener");
+    btn.setAttribute("href", data[i].link);
+    btn.setAttribute("download", "");
     btn.classList.add("list__button-btn");
     btn.innerHTML = "Download";
     button.appendChild(btn);
